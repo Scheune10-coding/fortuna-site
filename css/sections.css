@@ -8,7 +8,7 @@
   transform: translateY(40px);
   transition: 0.6s ease;
   max-width: 900px;
-  margin: 40px auto; /* Zentrierung */
+  margin: 40px auto;
   background: var(--rot);
   padding: 30px;
   border-radius: 24px;
@@ -36,10 +36,16 @@
   border: 2px solid var(--weiss);
 }
 
-@media (max-width: 749px) {
+@media (max-width: 994px) {
+  .section {
+    margin: 40px 40px ;
+  }
+}
+
+@media (max-width: 699px) {
   .section {
     flex-direction: column;
-    margin: 20px 20px 40px;
+    margin: 40px 40px;
   }
 
   .image_placeholder {

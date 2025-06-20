@@ -1,25 +1,34 @@
-
+/* Header-Styling */
 header {
-  background: var(--rot);
-  padding: 20px;
+  position: sticky;
+  top: 0;
+  background: var(--weiss);
+  z-index: 1000;
+  padding: 10px 20px;
   text-align: center;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
+/* Logo */
 .image_logo {
   width: 120px;
-  margin: 0 auto 10px;
+  margin: 0 auto 20px;
 }
 
-nav {
-  margin-top: 10px;
+/* Desktop-Navigation */
+.desktop-nav {
+  display: flex;
+  flex-wrap: wrap; /* wichtig, damit Zeilen entstehen */
+  justify-content: center;
+  gap: 15px 20px;
+  margin-bottom: 10px;
 }
+
 
 nav a {
-  margin: 0 12px;
   text-decoration: none;
   font-weight: 600;
-  color: var(--weiss);
+  color: var(--rot);
   transition: color 0.3s ease;
 }
 
@@ -28,6 +37,7 @@ nav a:focus {
   color: var(--gruen);
 }
 
+/* Mobile Navigation */
 .mobile-nav {
   display: none;
   flex-direction: column;
@@ -38,23 +48,24 @@ nav a:focus {
 #dropdown-toggle {
   background: none;
   border: none;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--weiss);
+  font-size: 1rem;
   cursor: pointer;
-  padding: 10px;
+  margin: 12px 12px;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--rot);
+  transition: color 0.3s ease;
 }
 
 #dropdown-menu {
-  display: flex;
+  display: none;
   flex-direction: column;
-  gap: 6px;
-  background: var(--rot);
+  gap: 15px;
+  background: var(--weiss);
   padding: 10px 0;
-  border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   position: absolute;
-  top: 40px;
+  top: 41px;
   left: 0;
   right: 0;
   text-align: center;
@@ -62,7 +73,7 @@ nav a:focus {
 }
 
 #dropdown-menu a {
-  color: var(--weiss);
+  color: var(--rot);
   text-decoration: none;
   font-weight: 500;
 }
@@ -71,16 +82,22 @@ nav a:focus {
   color: var(--gruen);
 }
 
+/* Klassensteuerung */
 .hidden {
-  display: none;
+  display: none !important;
 }
 
-@media (max-width: 1044px) {
+/* Responsive Umschalten */
+@media (max-width: 599px) {
   .desktop-nav {
     display: none;
   }
 
   .mobile-nav {
+    display: flex;
+  }
+
+  #dropdown-menu {
     display: flex;
   }
 }
