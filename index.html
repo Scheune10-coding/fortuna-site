@@ -78,14 +78,25 @@
 
   <section id="kontakt" class="section">
     <div>
-      <h2>Kontakt</h2>
+      <h2>Kontaktieren sie uns!</h2>
+      <p>Wir freuen uns über ihre Nachricht.</p>
       <form action="https://formsubmit.co/deine@email.de" method="POST">
         <input type="text" name="name" required placeholder="Name" />
         <input type="email" name="email" required placeholder="E-Mail" />
         <input type="text" name="telefon" placeholder="Telefonnummer" />
-        <textarea name="message" required placeholder="Nachricht"></textarea>
-        <label><input type="checkbox" required /> Ich habe die Datenschutzerklärung gelesen.</label>
-        <button type="submit">Absenden</button>
+        <textarea name="message" required placeholder="Deine Nachricht an uns..."></textarea>
+        <div class="form-dsgvo">
+          <label class="checkbox-label">
+            <input type="checkbox" required />
+            <span>
+              Ich erkläre mich mit der Verarbeitung der eingegebenen Daten sowie der
+              <a href="#datenschutz">Datenschutzerklärung</a> einverstanden.*
+            </span>
+          </label>
+          <p class="form-hinweis">* Pflichtfelder</p>
+          <button type="submit">Absenden</button>
+        </div>
+
       </form>
     </div>
   </section>

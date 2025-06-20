@@ -1,3 +1,7 @@
+form {
+  margin-top: 10px;
+}
+
 
 form input,
 form textarea {
@@ -11,6 +15,14 @@ form textarea {
   background: var(--weiss);
 }
 
+form input::placeholder,
+form textarea::placeholder {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+
 form input:focus,
 form textarea:focus {
   outline: none;
@@ -18,28 +30,62 @@ form textarea:focus {
   box-shadow: 0 0 6px var(--rot);
 }
 
-form label {
+
+
+.form-dsgvo {
+  background: #c62828; /* dein Rotton */
+  color: white;
+  padding: 20px 0;
+  padding-left: 0;
+  border-radius: 8px;
   display: flex;
-  align-items: center;
-  gap: 8px; /* Abstand zwischen Checkbox und Text */
-  margin: 10px 0 5px;
-  font-weight: 600;
-  color: var(--weiss);
+  flex-direction: column;
+  gap: 12px;
 }
 
+.checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
 
-form button {
+.checkbox-label input[type="checkbox"] {
+  margin-left: 2px;
+  width: 13px;
+  margin-top: 3px;
+  transform: scale(1.2); /* optional für größere Box */
+}
+
+.checkbox-label a {
+  color: white;
+  text-decoration: underline;
+}
+
+.form-hinweis {
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.form-dsgvo button {
   background: var(--gruen);
   color: var(--weiss);
-  border: none;
+  border: solid;
+  border-color: var(--gruen);
   padding: 12px 20px;
   border-radius: 8px;
   cursor: pointer;
   font-size: 1rem;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: 100%;
 }
 
-form button:hover,
-form button:focus {
-  background: #1b5724;
+.form-dsgvo button:hover {
+  background-color: var(--weiss);
+  color: var(--gruen);
+}
+
+.form-dsgvo button:active {
+  transform: scale(1.01);
 }

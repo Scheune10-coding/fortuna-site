@@ -4,7 +4,7 @@ header {
   top: 0;
   background: var(--weiss);
   z-index: 1000;
-  padding: 10px 20px;
+  padding: 10px 10px;
   text-align: center;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
@@ -18,22 +18,22 @@ header {
 /* Desktop-Navigation */
 .desktop-nav {
   display: flex;
-  flex-wrap: wrap; /* wichtig, damit Zeilen entstehen */
+  flex-wrap: wrap; /* Zeilenumbruch */
   justify-content: center;
-  gap: 15px 20px;
-  margin-bottom: 10px;
+  gap: 15px 40px; /* horizontaler Abstand zwischen Links */
+  padding: 10px 0; /* vertikaler Abstand oben/unten */
 }
 
-
-nav a {
+.desktop-nav a {
   text-decoration: none;
   font-weight: 600;
   color: var(--rot);
   transition: color 0.3s ease;
+  padding: 6px 0; /* vertikaler Abstand pro Link */
 }
 
-nav a:hover,
-nav a:focus {
+.desktop-nav a:hover,
+.desktop-nav a:focus {
   color: var(--gruen);
 }
 
@@ -50,19 +50,27 @@ nav a:focus {
   border: none;
   font-size: 1rem;
   cursor: pointer;
-  margin: 12px 12px;
+  margin: 12px 0;
   text-decoration: none;
   font-weight: 600;
   color: var(--rot);
   transition: color 0.3s ease;
 }
 
+#dropdown-toggle:hover {
+  color: var(--gruen);
+}
+
+/* Dropdown-Menü (mit Transition) */
 #dropdown-menu {
-  display: none;
+  display: flex;
   flex-direction: column;
   gap: 15px;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
   background: var(--weiss);
-  padding: 10px 0;
+  padding: 0;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   position: absolute;
   top: 41px;
@@ -70,6 +78,14 @@ nav a:focus {
   right: 0;
   text-align: center;
   z-index: 1000;
+  transition: opacity 0.3s ease, max-height 0.3s ease, padding 0.3s ease;
+}
+
+
+#dropdown-menu.show {
+  opacity: 1;
+  max-height: 500px;
+  padding: 10px 0;
 }
 
 #dropdown-menu a {
@@ -82,11 +98,6 @@ nav a:focus {
   color: var(--gruen);
 }
 
-/* Klassensteuerung */
-.hidden {
-  display: none !important;
-}
-
 /* Responsive Umschalten */
 @media (max-width: 599px) {
   .desktop-nav {
@@ -94,10 +105,6 @@ nav a:focus {
   }
 
   .mobile-nav {
-    display: flex;
-  }
-
-  #dropdown-menu {
     display: flex;
   }
 }
