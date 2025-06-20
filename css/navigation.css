@@ -11,7 +11,7 @@ header {
 
 /* Logo */
 .image_logo {
-  width: 120px;
+  width: 100px;
   margin: 0 auto 20px;
 }
 
@@ -99,7 +99,7 @@ header {
 }
 
 /* Responsive Umschalten */
-@media (max-width: 599px) {
+@media (max-width: 600px) {
   .desktop-nav {
     display: none;
   }
