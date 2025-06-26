@@ -1,0 +1,70 @@
+/* Grundlegendes Hero-Section Styling */
+#hero.custom-slider {
+  position: relative;
+  overflow: hidden;
+  height: 60vh;
+  min-height: 300px;
+  background: var(--rot);
+}
+
+/* Slider-Track, der alle Slides nebeneinander anordnet */
+.slider-track {
+  display: flex;
+  gap: 20px; /* Abstand zwischen Slides */
+  will-change: transform;
+  height: 100%;
+}
+
+/* Einzelne Slide */
+.slide {
+  flex: 0 0 auto;
+  width: 600px;  /* Feste Breite, anpassen je nach Bildgröße */
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Bilder in den Slides */
+.slide img {
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+}
+
+/* Overlay Text über dem Slider */
+.hero-overlay {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.hero-overlay h1,
+.hero-overlay p {
+  color: var(--weiss);
+  text-shadow: -1px -1px 0 var(--rot),
+               1px -1px 0 var(--rot),
+              -1px 1px 0 var(--rot),
+               1px 1px 0 var(--rot);
+  margin: 0;
+}
+
+.hero-overlay h1 {
+  font-size: 2.5rem;
+}
+
+.hero-overlay p {
+  font-size: 1.6rem;
+}
+
+/* Navigation Buttons - nicht mehr nötig für manuellen Slider, kannst du entfernen, falls keine Buttons */
+.swiper-button-prev,
+.swiper-button-next {
+  display: none;
+}

@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SV Fortuna Großschwabhausen</title>
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
 </head>
 <body>
   <header>
@@ -40,66 +43,74 @@
     </nav>
   </header>
 
-  <main id="hero" class="section visible">
-    <div>
-      <h1>SV Fortuna Großschwabhausen</h1>
-      <p>Miteinander. Füreinander.</p>
-    </div>
-    <img class="image_placeholder" src="assets/placeholder.png" alt="Hero Bild" />
+  <main>
+    <section id="hero" class="custom-slider">
+      <div class="slider-track">
+        <div class="slide"><img src="assets/handball.png" alt="Handball" /></div>
+        <div class="slide"><img src="assets/gymnastik.png" alt="Gymnastik" /></div>
+        <div class="slide"><img src="assets/tischtennis.png" alt="Tischtennis" /></div>
+        <div class="slide"><img src="assets/reha-sport.png" alt="Rehasport" /></div>
+      </div>
+
+      <div class="hero-overlay">
+        <h1>SV Fortuna Großschwabhausen</h1>
+        <p>- Miteinander Füreinander -</p>
+      </div>
+    </section>
+
+    <section id="news" class="section">
+      <div>
+        <h2>Aktuelles</h2>
+        <p>50 Jahre Fußball | Nachwuchspreis 2024 | Ü60 Landesmeister</p>
+      </div>
+      <img class="image_placeholder" src="assets/placeholder.png" alt="News Bild" />
+    </section>
+
+    <section id="support" class="section">
+      <div>
+        <h2>Unterstützung gesucht</h2>
+        <p>Kontaktieren Sie uns, um den Verein zu fördern.</p>
+      </div>
+      <img class="image_placeholder" src="assets/placeholder.png" alt="Unterstützung" />
+    </section>
+
+    <section id="downloads" class="section">
+      <div>
+        <h2>Downloads</h2>
+        <ul>
+          <li><a href="#">Satzung</a></li>
+          <li><a href="#">Beitrittserklärung</a></li>
+          <li><a href="#">Beiträge</a></li>
+        </ul>
+      </div>
+      <img class="image_placeholder" src="assets/placeholder.png" alt="Downloads" />
+    </section>
+
+    <section id="kontakt" class="section">
+      <div>
+        <h2>Kontaktieren sie uns!</h2>
+        <p>Wir freuen uns über ihre Nachricht.</p>
+        <form action="https://formsubmit.co/deine@email.de" method="POST">
+          <input type="text" name="name" required placeholder="Name" />
+          <input type="email" name="email" required placeholder="E-Mail" />
+          <input type="text" name="telefon" placeholder="Telefonnummer" />
+          <textarea name="message" required placeholder="Deine Nachricht an uns..."></textarea>
+          <div class="form-dsgvo">
+            <label class="checkbox-label">
+              <input type="checkbox" required />
+              <span>
+                Ich erkläre mich mit der Verarbeitung der eingegebenen Daten sowie der
+                <a href="#datenschutz">Datenschutzerklärung</a> einverstanden.*
+              </span>
+            </label>
+            <p class="form-hinweis">* Pflichtfelder</p>
+            <button type="submit">Absenden</button>
+          </div>
+
+        </form>
+      </div>
+    </section>
   </main>
-
-  <section id="news" class="section">
-    <div>
-      <h2>Aktuelles</h2>
-      <p>50 Jahre Fußball | Nachwuchspreis 2024 | Ü60 Landesmeister</p>
-    </div>
-    <img class="image_placeholder" src="assets/placeholder.png" alt="News Bild" />
-  </section>
-
-  <section id="support" class="section">
-    <div>
-      <h2>Unterstützung gesucht</h2>
-      <p>Kontaktieren Sie uns, um den Verein zu fördern.</p>
-    </div>
-    <img class="image_placeholder" src="assets/placeholder.png" alt="Unterstützung" />
-  </section>
-
-  <section id="downloads" class="section">
-    <div>
-      <h2>Downloads</h2>
-      <ul>
-        <li><a href="#">Satzung</a></li>
-        <li><a href="#">Beitrittserklärung</a></li>
-        <li><a href="#">Beiträge</a></li>
-      </ul>
-    </div>
-    <img class="image_placeholder" src="assets/placeholder.png" alt="Downloads" />
-  </section>
-
-  <section id="kontakt" class="section">
-    <div>
-      <h2>Kontaktieren sie uns!</h2>
-      <p>Wir freuen uns über ihre Nachricht.</p>
-      <form action="https://formsubmit.co/deine@email.de" method="POST">
-        <input type="text" name="name" required placeholder="Name" />
-        <input type="email" name="email" required placeholder="E-Mail" />
-        <input type="text" name="telefon" placeholder="Telefonnummer" />
-        <textarea name="message" required placeholder="Deine Nachricht an uns..."></textarea>
-        <div class="form-dsgvo">
-          <label class="checkbox-label">
-            <input type="checkbox" required />
-            <span>
-              Ich erkläre mich mit der Verarbeitung der eingegebenen Daten sowie der
-              <a href="#datenschutz">Datenschutzerklärung</a> einverstanden.*
-            </span>
-          </label>
-          <p class="form-hinweis">* Pflichtfelder</p>
-          <button type="submit">Absenden</button>
-        </div>
-
-      </form>
-    </div>
-  </section>
 
   <footer>
     <p>&copy; 2025 SV Fortuna Großschwabhausen – <a href="#">Impressum</a> | <a href="#">Datenschutz</a> | <a href="#">Downloads</a></p>
@@ -107,5 +118,6 @@
 
   <script src="js/scroll.js"></script>
   <script src="js/menu.js"></script>
+  <script src="js/hero-slider.js"></script>
 </body>
 </html>
