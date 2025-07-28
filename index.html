@@ -60,57 +60,97 @@
     </section>
 
     <section id="support" class="section">
-      <div>
-        <h2>Unterstützung gesucht</h2>
-        <p>Kontaktieren Sie uns, um den Verein zu fördern.</p>
+      <div class="field">
+        <div>
+          <h2>Unterstützung gesucht</h2>
+          <p>Kontaktieren Sie uns, um den Verein zu fördern.</p>
+        </div>
+        <img class="image_placeholder" src="assets/placeholder.png" alt="Unterstützung" />
       </div>
-      <img class="image_placeholder" src="assets/placeholder.png" alt="Unterstützung" />
     </section>
 
     <section id="news" class="section">
-      <div>
-        <h2>Aktuelles</h2>
-        <p>50 Jahre Fußball | Nachwuchspreis 2024 | Ü60 Landesmeister</p>
+      <div class="news-slider">
+        <button class="slider-btn left" aria-label="Vorherige News">←</button>
+
+        <div class="news-track">
+          <div class="field">
+            <h2>50 Jahre Fußball</h2>
+            <div class="field-body">
+              <div class="field-text">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum inventore mollitia saepe earum illo ipsa odit fugiat pariatur hic iste aut maxime et, ullam fugit labore. Quo quod modi eaque!</p>
+              </div>
+              <img class="image_placeholder" src="assets/placeholder.png" alt="News Bild" />
+            </div>
+          </div>
+
+          <div class="field">
+            <h2>Nachwuchspreis 2024</h2>
+            <div class="field-body">
+              <div class="field-text">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quos ea sequi enim necessitatibus amet corporis quod vel, esse autem deleniti laborum nobis sunt incidunt? Nam iure officia quam id.</p>
+              </div>
+              <img class="image_placeholder" src="assets/placeholder.png" alt="News Bild" />
+            </div>
+          </div>
+
+          <div class="field">
+            <h2>Ü60 Landesmeister</h2>
+            <div class="field-body">
+              <div class="field-text">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro impedit voluptate ad nesciunt quasi iusto non? Repellendus aliquam quibusdam consequuntur quia voluptate ullam, aspernatur ipsa soluta doloremque eveniet illum pariatur!</p>
+              </div>
+              <img class="image_placeholder" src="assets/placeholder.png" alt="News Bild" />
+            </div>
+          </div>
+        </div>
+
+        <button class="slider-btn right" aria-label="Nächste News">→</button>
       </div>
-      <img class="image_placeholder" src="assets/placeholder.png" alt="News Bild" />
     </section>
+
     
     <section id="downloads" class="section">
-      <div>
-        <h2>Downloads</h2>
-        <ul>
-          <li><a href="#">Satzung</a></li>
-          <li><a href="#">Beitrittserklärung</a></li>
-          <li><a href="#">Beiträge</a></li>
-        </ul>
+      <div class="field">
+        <div>
+          <h2>Downloads</h2>
+          <ul>
+            <li><a href="#">Satzung</a></li>
+            <li><a href="#">Beitrittserklärung</a></li>
+            <li><a href="#">Beiträge</a></li>
+          </ul>
+        </div>
+        <img class="image_placeholder" src="assets/placeholder.png" alt="Downloads" />
       </div>
-      <img class="image_placeholder" src="assets/placeholder.png" alt="Downloads" />
     </section>
 
     <section id="kontakt" class="section">
-      <div>
-        <h2>Kontaktieren sie uns!</h2>
-        <p>Wir freuen uns über ihre Nachricht.</p>
-        <form action="https://formsubmit.co/deine@email.de" method="POST">
-          <input type="text" name="name" required placeholder="Name" />
-          <input type="email" name="email" required placeholder="E-Mail" />
-          <input type="text" name="telefon" placeholder="Telefonnummer" />
-          <textarea name="message" required placeholder="Deine Nachricht an uns..."></textarea>
-          <div class="form-dsgvo">
-            <label class="checkbox-label">
-              <input type="checkbox" required />
-              <span>
-                Ich erkläre mich mit der Verarbeitung der eingegebenen Daten sowie der
-                <a href="#datenschutz">Datenschutzerklärung</a> einverstanden.*
-              </span>
-            </label>
-            <p class="form-hinweis">* Pflichtfelder</p>
-            <button type="submit">Absenden</button>
-          </div>
+      <div class="field">
+        <div>
+          <h2>Kontaktieren sie uns!</h2>
+          <p>Wir freuen uns über ihre Nachricht.</p>
+          <form action="https://formsubmit.co/deine@email.de" method="POST">
+            <input type="text" name="name" required placeholder="Name" />
+            <input type="email" name="email" required placeholder="E-Mail" />
+            <input type="text" name="telefon" placeholder="Telefonnummer" />
+            <textarea name="message" required placeholder="Deine Nachricht an uns..."></textarea>
+            <div class="form-dsgvo">
+              <label class="checkbox-label">
+                <input type="checkbox" required />
+                <span>
+                  Ich erkläre mich mit der Verarbeitung der eingegebenen Daten sowie der
+                  <a href="#datenschutz">Datenschutzerklärung</a> einverstanden.*
+                </span>
+              </label>
+              <p class="form-hinweis">* Pflichtfelder</p>
+              <button type="submit">Absenden</button>
+            </div>
 
-        </form>
+          </form>
+        </div>
       </div>
     </section>
+
   </main>
 
   <footer>
@@ -120,5 +160,7 @@
   <script src="js/scroll.js"></script>
   <script src="js/menu.js"></script>
   <script src="js/hero-slider.js"></script>
+  <script src="js/section-height.js"></script>
+  <script src="js/news-slider.js"></script>
 </body>
 </html>

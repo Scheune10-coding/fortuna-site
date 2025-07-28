@@ -63,11 +63,6 @@
   font-size: 1.6rem;
 }
 
-/* Navigation Buttons - nicht mehr nötig für manuellen Slider, kannst du entfernen, falls keine Buttons */
-.swiper-button-prev,
-.swiper-button-next {
-  display: none;
-}
 
 @media (max-width: 1103px){
   #hero.custom-slider {

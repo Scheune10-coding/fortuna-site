@@ -1,55 +1,15 @@
-
+/* SECTION: Wrapper für volle Viewport-Höhe */
 .section {
+  height: auto;
+  padding: 10vh 0;
   display: flex;
-  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  gap: 20px;
-  opacity: 0;
-  transform: translateY(40px);
-  transition: 0.6s ease;
-  max-width: 900px;
-  margin: 40px auto;
-  background: var(--rot);
-  padding: 30px;
-  border-radius: 24px;
-  box-shadow: 0 6px 20px 4px var(--gruen);
-  color: var(--weiss);
+}
+
+.section > .field {
+  max-width: 900px; /* optional, wenn du nicht willst dass es zu breit wird */
+  width: 100%;
 }
 
 
-.section.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.section > *:not(img) {
-  flex: 1;
-}
-
-.section h2 {
-  margin-bottom: 15px;
-}
-
-.image_placeholder {
-  max-width: 300px;
-  border-radius: 16px;
-  border: 2px solid var(--weiss);
-}
-
-@media (max-width: 994px) {
-  .section {
-    margin: 40px 40px ;
-  }
-}
-
-@media (max-width: 699px) {
-  .section {
-    flex-direction: column;
-    margin: 40px 40px;
-  }
-
-  .image_placeholder {
-    max-width: 100%;
-    margin-top: 20px;
-  }
-}

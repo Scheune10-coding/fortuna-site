@@ -1,0 +1,89 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+  background: var(--rot);
+  color: var(--weiss);
+  border-radius: 24px;
+  box-shadow: 0 6px 20px 4px var(--gruen);
+  box-sizing: border-box;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.6s ease;
+  width: 1000px;
+}
+
+/* sichtbare Animation */
+.field.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Body-Aufbau */
+.field-body {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+/* Text nimmt den Platz, den das Bild nicht braucht */
+.field-text {
+  flex: 1;
+}
+
+/* Bildgröße */
+.image_placeholder {
+  max-width: 300px;
+  border-radius: 16px;
+  border: 2px solid var(--weiss);
+}
+
+.news-slider {
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+}
+
+.news-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 8000px;
+  gap: 20vh;
+}
+
+/* Pfeile */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.slider-btn.left {
+  left: 10px;
+}
+
+.slider-btn.right {
+  right: 10px;
+}
+
+
+/* Responsive: unter 699px stacked */
+@media (max-width: 699px) {
+  .field-body {
+    flex-direction: column;
+  }
+
+  .image_placeholder {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+}
